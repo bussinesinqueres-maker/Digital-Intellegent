@@ -1,0 +1,671 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Digital Intelligent
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Welcome Screen -->
+  <div class="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center p-6" id="welcome-screen">
+   <img alt="Open hand symbol, palm facing forward, welcoming gesture in a simple flat style" class="w-36 h-36 mb-6" height="150" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1a08a563-6d3e-4c5d-6a59-1f713db21aa3.jpg" width="150"/>
+   <h1 class="text-3xl font-semibold text-gray-800 mb-4">
+    Welcome, hello!
+   </h1>
+   <button aria-label="Enter the Digital Intelligent site" class="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" id="enter-site-btn">
+    Enter Site
+   </button>
+  </div>
+  <!-- Main App Container -->
+  <div class="flex-1 flex flex-col md:flex-row hidden" id="app">
+   <!-- Sidebar Navigation -->
+   <nav aria-label="Primary Navigation" class="bg-white shadow-md w-full md:w-64 flex-shrink-0">
+    <div class="px-6 py-8">
+     <h2 class="text-2xl font-bold text-blue-700 mb-8">
+      Digital Intelligent
+     </h2>
+     <ul class="space-y-4">
+      <li>
+       <button class="flex items-center w-full text-gray-700 hover:text-blue-600 focus:text-blue-600 focus:outline-none" data-menu="dashboard">
+        <i class="fas fa-home fa-lg w-6">
+        </i>
+        <span class="ml-3 font-semibold text-lg">
+         Dashboard Utama
+        </span>
+       </button>
+      </li>
+      <li>
+       <button class="flex items-center w-full text-gray-700 hover:text-blue-600 focus:text-blue-600 focus:outline-none" data-menu="project-management">
+        <i class="fas fa-tasks fa-lg w-6">
+        </i>
+        <span class="ml-3 font-semibold text-lg">
+         Manajemen Proyek
+        </span>
+       </button>
+      </li>
+      <li>
+       <button class="flex items-center w-full text-gray-700 hover:text-blue-600 focus:text-blue-600 focus:outline-none" data-menu="ecommerce-integration">
+        <i class="fas fa-shopping-bag fa-lg w-6">
+        </i>
+        <span class="ml-3 font-semibold text-lg">
+         Integrasi E-commerce
+        </span>
+       </button>
+      </li>
+      <li>
+       <button class="flex items-center w-full text-gray-700 hover:text-blue-600 focus:text-blue-600 focus:outline-none" data-menu="customer-service">
+        <i class="fab fa-whatsapp fa-lg w-6 text-green-500">
+        </i>
+        <span class="ml-3 font-semibold text-lg">
+         Layanan Pelanggan
+        </span>
+       </button>
+      </li>
+      <li>
+       <button class="flex items-center w-full text-gray-700 hover:text-blue-600 focus:text-blue-600 focus:outline-none" data-menu="add-product">
+        <i class="fas fa-shopping-cart fa-lg w-6">
+        </i>
+        <span class="ml-3 font-semibold text-lg">
+         Penambahan Produk
+        </span>
+       </button>
+      </li>
+      <li>
+       <button class="flex items-center w-full text-gray-700 hover:text-blue-600 focus:text-blue-600 focus:outline-none" data-menu="business-analysis">
+        <i class="fas fa-chart-line fa-lg w-6">
+        </i>
+        <span class="ml-3 font-semibold text-lg">
+         Analisis Perkembangan
+        </span>
+       </button>
+      </li>
+      <li>
+       <button class="flex items-center w-full text-gray-700 hover:text-blue-600 focus:text-blue-600 focus:outline-none" data-menu="profile">
+        <i class="fas fa-user fa-lg w-6">
+        </i>
+        <span class="ml-3 font-semibold text-lg">
+         Profil Pribadi
+        </span>
+       </button>
+      </li>
+     </ul>
+    </div>
+   </nav>
+   <!-- Content Area -->
+   <main class="flex-1 bg-white p-6 overflow-auto">
+    <!-- Dashboard Utama -->
+    <section class="hidden" id="dashboard">
+     <h1 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+      <i class="fas fa-home mr-3 text-blue-600">
+      </i>
+      Dashboard Utama
+     </h1>
+     <p class="mb-6 text-gray-700 max-w-3xl">
+      Menampilkan data bisnis penting secara real-time, fokus pada performa penjualan produk yang lebih efisien dengan visualisasi data yang menarik.
+     </p>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-blue-50 rounded-lg p-5 shadow">
+       <h2 class="text-xl font-semibold text-blue-700 mb-2">
+        Penjualan Hari Ini
+       </h2>
+       <p class="text-3xl font-bold text-blue-900">
+        1,245
+       </p>
+       <p class="text-sm text-blue-600 mt-1">
+        Produk terjual
+       </p>
+      </div>
+      <div class="bg-green-50 rounded-lg p-5 shadow">
+       <h2 class="text-xl font-semibold text-green-700 mb-2">
+        Pendapatan
+       </h2>
+       <p class="text-3xl font-bold text-green-900">
+        Rp 125.000.000
+       </p>
+       <p class="text-sm text-green-600 mt-1">
+        Hari ini
+       </p>
+      </div>
+      <div class="bg-yellow-50 rounded-lg p-5 shadow">
+       <h2 class="text-xl font-semibold text-yellow-700 mb-2">
+        Produk Terlaris
+       </h2>
+       <p class="text-3xl font-bold text-yellow-900">
+        Smartphone X100
+       </p>
+       <p class="text-sm text-yellow-600 mt-1">
+        Jumlah terjual: 320
+       </p>
+      </div>
+     </div>
+     <div class="mt-10">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+       Visualisasi Data Penjualan
+      </h3>
+      <img alt="Line chart showing sales performance over the last 30 days with increasing trend and data points" class="w-full rounded-lg shadow" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/51a55bbb-f2ff-4ad7-69b5-22a7a4e915ad.jpg" width="800"/>
+     </div>
+    </section>
+    <!-- Manajemen Proyek -->
+    <section class="hidden" id="project-management">
+     <h1 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+      <i class="fas fa-tasks mr-3 text-blue-600">
+      </i>
+      Manajemen Proyek
+     </h1>
+     <p class="mb-6 text-gray-700 max-w-3xl">
+      Memungkinkan pimpinan memantau progres proyek secara terpusat dan mempermudah koordinasi tim.
+     </p>
+     <div class="overflow-x-auto">
+      <table class="min-w-full bg-white shadow rounded-lg">
+       <thead class="bg-blue-600 text-white">
+        <tr>
+         <th class="py-3 px-6 text-left">
+          Proyek
+         </th>
+         <th class="py-3 px-6 text-left">
+          Status
+         </th>
+         <th class="py-3 px-6 text-left">
+          Progress
+         </th>
+         <th class="py-3 px-6 text-left">
+          Deadline
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr class="border-b hover:bg-blue-50">
+         <td class="py-3 px-6">
+          Pengembangan Website Baru
+         </td>
+         <td class="py-3 px-6">
+          On Track
+         </td>
+         <td class="py-3 px-6">
+          <div class="w-full bg-gray-200 rounded-full h-4">
+           <div class="bg-blue-600 h-4 rounded-full" style="width: 75%">
+           </div>
+          </div>
+          <span class="text-sm text-gray-600">
+           75%
+          </span>
+         </td>
+         <td class="py-3 px-6">
+          30 Juni 2024
+         </td>
+        </tr>
+        <tr class="border-b hover:bg-blue-50">
+         <td class="py-3 px-6">
+          Kampanye Pemasaran Q3
+         </td>
+         <td class="py-3 px-6">
+          Delayed
+         </td>
+         <td class="py-3 px-6">
+          <div class="w-full bg-gray-200 rounded-full h-4">
+           <div class="bg-yellow-400 h-4 rounded-full" style="width: 40%">
+           </div>
+          </div>
+          <span class="text-sm text-gray-600">
+           40%
+          </span>
+         </td>
+         <td class="py-3 px-6">
+          15 Juli 2024
+         </td>
+        </tr>
+        <tr class="border-b hover:bg-blue-50">
+         <td class="py-3 px-6">
+          Integrasi Sistem ERP
+         </td>
+         <td class="py-3 px-6">
+          On Track
+         </td>
+         <td class="py-3 px-6">
+          <div class="w-full bg-gray-200 rounded-full h-4">
+           <div class="bg-blue-600 h-4 rounded-full" style="width: 60%">
+           </div>
+          </div>
+          <span class="text-sm text-gray-600">
+           60%
+          </span>
+         </td>
+         <td class="py-3 px-6">
+          10 Agustus 2024
+         </td>
+        </tr>
+        <tr class="border-b hover:bg-blue-50">
+         <td class="py-3 px-6">
+          Pelatihan Tim Customer Service
+         </td>
+         <td class="py-3 px-6">
+          Completed
+         </td>
+         <td class="py-3 px-6">
+          <div class="w-full bg-gray-200 rounded-full h-4">
+           <div class="bg-green-500 h-4 rounded-full" style="width: 100%">
+           </div>
+          </div>
+          <span class="text-sm text-gray-600">
+           100%
+          </span>
+         </td>
+         <td class="py-3 px-6">
+          1 Mei 2024
+         </td>
+        </tr>
+        <tr class="border-b hover:bg-blue-50">
+         <td class="py-3 px-6">
+          Pengembangan Aplikasi Mobile
+         </td>
+         <td class="py-3 px-6">
+          On Track
+         </td>
+         <td class="py-3 px-6">
+          <div class="w-full bg-gray-200 rounded-full h-4">
+           <div class="bg-blue-600 h-4 rounded-full" style="width: 50%">
+           </div>
+          </div>
+          <span class="text-sm text-gray-600">
+           50%
+          </span>
+         </td>
+         <td class="py-3 px-6">
+          20 September 2024
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <!-- Integrasi E-commerce -->
+    <section class="hidden" id="ecommerce-integration">
+     <h1 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+      <i class="fas fa-shopping-bag mr-3 text-blue-600">
+      </i>
+      Integrasi E-commerce
+     </h1>
+     <p class="mb-6 text-gray-700 max-w-3xl">
+      Menampilkan data penjualan, inventaris, dan pesanan dari platform e-commerce yang terintegrasi.
+     </p>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow p-5">
+       <h2 class="text-xl font-semibold text-gray-800 mb-3">
+        Penjualan Hari Ini
+       </h2>
+       <p class="text-4xl font-bold text-blue-700">
+        1,150
+       </p>
+       <p class="text-sm text-gray-600 mt-1">
+        Jumlah pesanan
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-5">
+       <h2 class="text-xl font-semibold text-gray-800 mb-3">
+        Inventaris Produk
+       </h2>
+       <p class="text-4xl font-bold text-green-700">
+        5,430
+       </p>
+       <p class="text-sm text-gray-600 mt-1">
+        Stok tersedia
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-5">
+       <h2 class="text-xl font-semibold text-gray-800 mb-3">
+        Pesanan Tertunda
+       </h2>
+       <p class="text-4xl font-bold text-yellow-700">
+        87
+       </p>
+       <p class="text-sm text-gray-600 mt-1">
+        Perlu diproses
+       </p>
+      </div>
+     </div>
+     <div class="mt-10">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+       Ringkasan Pesanan Terbaru
+      </h3>
+      <ul class="space-y-4 max-w-3xl">
+       <li class="bg-gray-100 rounded-lg p-4 shadow flex justify-between items-center">
+        <div>
+         <p class="font-semibold text-gray-800">
+          Order #12345
+         </p>
+         <p class="text-sm text-gray-600">
+          Produk: Smartphone X100
+         </p>
+        </div>
+        <span class="text-green-600 font-semibold">
+         Selesai
+        </span>
+       </li>
+       <li class="bg-gray-100 rounded-lg p-4 shadow flex justify-between items-center">
+        <div>
+         <p class="font-semibold text-gray-800">
+          Order #12346
+         </p>
+         <p class="text-sm text-gray-600">
+          Produk: Laptop Pro 15"
+         </p>
+        </div>
+        <span class="text-yellow-600 font-semibold">
+         Dalam Proses
+        </span>
+       </li>
+       <li class="bg-gray-100 rounded-lg p-4 shadow flex justify-between items-center">
+        <div>
+         <p class="font-semibold text-gray-800">
+          Order #12347
+         </p>
+         <p class="text-sm text-gray-600">
+          Produk: Headphone Wireless
+         </p>
+        </div>
+        <span class="text-red-600 font-semibold">
+         Tertunda
+        </span>
+       </li>
+       <li class="bg-gray-100 rounded-lg p-4 shadow flex justify-between items-center">
+        <div>
+         <p class="font-semibold text-gray-800">
+          Order #12348
+         </p>
+         <p class="text-sm text-gray-600">
+          Produk: Smartwatch S3
+         </p>
+        </div>
+        <span class="text-green-600 font-semibold">
+         Selesai
+        </span>
+       </li>
+       <li class="bg-gray-100 rounded-lg p-4 shadow flex justify-between items-center">
+        <div>
+         <p class="font-semibold text-gray-800">
+          Order #12349
+         </p>
+         <p class="text-sm text-gray-600">
+          Produk: Kamera Digital
+         </p>
+        </div>
+        <span class="text-yellow-600 font-semibold">
+         Dalam Proses
+        </span>
+       </li>
+      </ul>
+     </div>
+    </section>
+    <!-- Layanan Pelanggan -->
+    <section class="hidden" id="customer-service">
+     <h1 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+      <i class="fab fa-whatsapp mr-3 text-green-500">
+      </i>
+      Layanan Pelanggan
+     </h1>
+     <p class="mb-6 text-gray-700 max-w-3xl">
+      Dilengkapi dengan fitur chatbot untuk respons cepat dan otomatis, serta menyediakan informasi dasar dan solusi untuk pertanyaan umum pelanggan.
+     </p>
+     <div class="max-w-3xl bg-gray-100 rounded-lg p-6 shadow">
+      <div aria-label="Chatbot conversation area" class="bg-white rounded-lg p-4 h-96 overflow-y-auto border border-gray-300 mb-4" id="chatbot">
+       <div class="mb-3">
+        <p class="text-gray-700">
+         <span class="font-semibold text-blue-600">
+          Bot:
+         </span>
+         Halo! Ada yang bisa kami bantu?
+        </p>
+       </div>
+      </div>
+      <form aria-label="Chatbot input form" class="flex space-x-3" id="chat-form">
+       <input aria-label="Chat input" autocomplete="off" class="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="chat-input" placeholder="Tulis pertanyaan Anda..." required="" type="text"/>
+       <button aria-label="Send chat message" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" type="submit">
+        <i class="fas fa-paper-plane">
+        </i>
+       </button>
+      </form>
+     </div>
+     <div class="mt-8">
+      <a aria-label="Contact customer service via WhatsApp" class="inline-flex items-center px-5 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-green-500" href="https://wa.me/6285852710195" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-whatsapp fa-lg mr-3">
+       </i>
+       Hubungi Kami via WhatsApp
+      </a>
+     </div>
+    </section>
+    <!-- Penambahan Produk -->
+    <section class="hidden max-w-3xl" id="add-product">
+     <h1 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+      <i class="fas fa-shopping-cart mr-3 text-blue-600">
+      </i>
+      Penambahan Produk
+     </h1>
+     <p class="mb-6 text-gray-700">
+      Terdapat menu khusus di dashboard utama untuk menambahkan produk baru dengan mudah, termasuk mengunggah detail produk, gambar, dan informasi relevan lainnya.
+     </p>
+     <form aria-label="Add new product form" class="bg-white rounded-lg shadow p-6 space-y-6">
+      <div>
+       <label class="block text-gray-700 font-semibold mb-2" for="product-name">
+        Nama Produk
+       </label>
+       <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="product-name" name="product-name" placeholder="Masukkan nama produk" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-2" for="product-description">
+        Deskripsi Produk
+       </label>
+       <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="product-description" name="product-description" placeholder="Masukkan deskripsi produk" required="" rows="4"></textarea>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-2" for="product-price">
+        Harga Produk (Rp)
+       </label>
+       <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="product-price" min="0" name="product-price" placeholder="Masukkan harga produk" required="" type="number"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-2" for="product-image">
+        Gambar Produk
+       </label>
+       <input accept="image/*" class="w-full text-gray-700" id="product-image" name="product-image" required="" type="file"/>
+      </div>
+      <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold focus:outline-none focus:ring-2 focus:ring-blue-600" type="submit">
+       Tambah Produk
+      </button>
+     </form>
+    </section>
+    <!-- Analisis Perkembangan -->
+    <section class="hidden max-w-5xl" id="business-analysis">
+     <h1 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+      <i class="fas fa-chart-line mr-3 text-blue-600">
+      </i>
+      Analisis Perkembangan
+     </h1>
+     <p class="mb-6 text-gray-700 max-w-4xl">
+      Menu untuk melihat dan menganalisis perkembangan bisnis secara mendalam.
+     </p>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+       <h2 class="text-xl font-semibold text-gray-800 mb-3">
+        Grafik Pendapatan Bulanan
+       </h2>
+       <img alt="Bar chart showing monthly revenue for the past 12 months with varying heights" class="w-full rounded-lg shadow" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f20325d7-4dcc-45e8-0c67-500e3e1e50c4.jpg" width="600"/>
+      </div>
+      <div>
+       <h2 class="text-xl font-semibold text-gray-800 mb-3">
+        Analisis Produk Terlaris
+       </h2>
+       <img alt="Pie chart showing distribution of top selling products with different colored segments" class="w-full rounded-lg shadow" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dd838124-88cf-45c1-b91b-7a20110a85ce.jpg" width="600"/>
+      </div>
+     </div>
+     <div class="mt-10">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+       Laporan Perkembangan
+      </h3>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 max-w-4xl">
+       <li>
+        Peningkatan penjualan sebesar 15% dibandingkan kuartal sebelumnya.
+       </li>
+       <li>
+        Produk Smartphone X100 tetap menjadi produk terlaris dengan kontribusi 30% dari total penjualan.
+       </li>
+       <li>
+        Integrasi e-commerce berhasil meningkatkan efisiensi pengelolaan inventaris.
+       </li>
+       <li>
+        Tim customer service berhasil menurunkan waktu respons rata-rata menjadi 2 menit.
+       </li>
+       <li>
+        Proyek pengembangan aplikasi mobile berjalan sesuai jadwal dengan progres 50%.
+       </li>
+      </ul>
+     </div>
+    </section>
+    <!-- Profil Pribadi -->
+    <section class="hidden max-w-3xl" id="profile">
+     <h1 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+      <i class="fas fa-user mr-3 text-blue-600">
+      </i>
+      Profil Pribadi
+     </h1>
+     <p class="mb-6 text-gray-700">
+      Menu untuk melihat dan mengelola identitas pribadi pengguna.
+     </p>
+     <div class="bg-white rounded-lg shadow p-6 space-y-6">
+      <div class="flex items-center space-x-6">
+       <img alt="User avatar silhouette in gray circle" class="w-24 h-24 rounded-full object-cover" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6308a89c-9531-4275-5ae1-48cb9c76dfb3.jpg" width="100"/>
+       <div>
+        <h2 class="text-2xl font-semibold text-gray-800">
+         John Doe
+        </h2>
+        <p class="text-gray-600">
+         Pimpinan Perusahaan
+        </p>
+       </div>
+      </div>
+      <form aria-label="Edit personal profile form" class="space-y-4">
+       <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="full-name">
+         Nama Lengkap
+        </label>
+        <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="full-name" name="full-name" required="" type="text" value="John Doe"/>
+       </div>
+       <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="email">
+         Email
+        </label>
+        <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="email" name="email" required="" type="email" value="john.doe@example.com"/>
+       </div>
+       <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="phone">
+         Nomor Telepon
+        </label>
+        <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="phone" name="phone" required="" type="tel" value="+62 812 3456 7890"/>
+       </div>
+       <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold focus:outline-none focus:ring-2 focus:ring-blue-600" type="submit">
+        Simpan Perubahan
+       </button>
+      </form>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script>
+   // Show welcome screen initially
+    const welcomeScreen = document.getElementById('welcome-screen');
+    const enterSiteBtn = document.getElementById('enter-site-btn');
+    const app = document.getElementById('app');
+    const menuButtons = document.querySelectorAll('nav button[data-menu]');
+    const sections = document.querySelectorAll('main > section');
+
+    function hideAllSections() {
+      sections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+    }
+
+    function activateMenu(menuName) {
+      hideAllSections();
+      const section = document.getElementById(menuName);
+      if (section) {
+        section.classList.remove('hidden');
+      }
+      menuButtons.forEach((btn) => {
+        if (btn.dataset.menu === menuName) {
+          btn.classList.add('text-blue-600', 'font-bold');
+        } else {
+          btn.classList.remove('text-blue-600', 'font-bold');
+        }
+      });
+    }
+
+    enterSiteBtn.addEventListener('click', () => {
+      welcomeScreen.classList.add('hidden');
+      app.classList.remove('hidden');
+      activateMenu('dashboard');
+    });
+
+    menuButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activateMenu(btn.dataset.menu);
+      });
+    });
+
+    // Chatbot simple simulation
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatbotArea = document.getElementById('chatbot');
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const userMessage = chatInput.value.trim();
+      if (!userMessage) return;
+
+      // Append user message
+      const userMsgElem = document.createElement('div');
+      userMsgElem.className = 'mb-3 text-right';
+      userMsgElem.innerHTML = `<p class="inline-block bg-blue-600 text-white rounded-lg px-4 py-2 max-w-xs break-words">${userMessage}</p>`;
+      chatbotArea.appendChild(userMsgElem);
+
+      chatInput.value = '';
+      chatbotArea.scrollTop = chatbotArea.scrollHeight;
+
+      // Simulate bot response after delay
+      setTimeout(() => {
+        const botResponse = generateBotResponse(userMessage);
+        const botMsgElem = document.createElement('div');
+        botMsgElem.className = 'mb-3 text-left';
+        botMsgElem.innerHTML = `<p class="inline-block bg-gray-200 text-gray-800 rounded-lg px-4 py-2 max-w-xs break-words"><span class="font-semibold text-blue-600">Bot:</span> ${botResponse}</p>`;
+        chatbotArea.appendChild(botMsgElem);
+        chatbotArea.scrollTop = chatbotArea.scrollHeight;
+      }, 1000);
+    });
+
+    function generateBotResponse(message) {
+      const msg = message.toLowerCase();
+      if (msg.includes('harga')) {
+        return 'Harga produk bervariasi, silakan lihat menu Penambahan Produk untuk detail.';
+      }
+      if (msg.includes('stok') || msg.includes('inventaris')) {
+        return 'Stok produk saat ini tersedia dan diperbarui secara real-time.';
+      }
+      if (msg.includes('waktu respons')) {
+        return 'Waktu respons customer service rata-rata adalah 2 menit.';
+      }
+      if (msg.includes('bantuan') || msg.includes('help')) {
+        return 'Silakan ajukan pertanyaan Anda, kami siap membantu.';
+      }
+      return 'Terima kasih atas pertanyaannya. Kami akan segera menghubungi Anda jika diperlukan.';
+    }
+  </script>
+ </body>
+</html>
